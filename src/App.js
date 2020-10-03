@@ -36,9 +36,9 @@ const App =()=> {
                   (<span>No hay tareas</span>)
                 }
 
-                  <li key={i}>
-                    <span className='with90'>{item.task}</span>  
-                    <a className='with10' onClick={ ()=> deleteTask(i)}>X</a>
+                  <li>
+                    <span className='with90'>TAREA</span>  
+                    <a className='with10' onClick={ ()=> deleteTask()}>X</a>
                   </li>
                 </ul>
           </section>
