@@ -1,40 +1,48 @@
+<p>
+    <h2 align="center"> Ejercicio super-todo </h2>
+</p>
 
-## TO-DO-LIST utilizando Reactjs
+En este ejercicio realizamos un ejemplo utilizando:
+- [React-router](https://reactrouter.com/)
 
-## Instalación
-
-- Realice un fork del repositorio
-
-Una vez que el repositorio se encuentre en su github realizar:
-
-- Clonar el repositorio a su computador
-
-- Instalar dependencias con el comando
-`yarn install`
-
-- Ejecutar el proyecto
-`yarn start`
+- [Context API](https://es.reactjs.org/docs/context.html)
 
 
-- Realizar los siguientes componentes
 
-![todolist](todo.gif)
+<h2>Instalación:</h2>
 
-## Requisitos TO-DO-LIST
+1. Asegurate de tener [nodejs](https://nodejs.org/es/) instalado
 
-- Permitir agregar nuevas tareas
+2. En tu terminal clonar el proyecto con el comando 
 
-- Se pueden Eliminar tareas
-
-- Mostrar total de tareas
-
-- Subir los cambios a su repositorio
-
-
-## push an existing repository from the command line
 ```
-git clone https://github.com/mortegac/sodimac-to-do-list.git
-git remote add origin https://github.com/mortegac/sodimac-to-do-list.git
-git branch -M main
-git push -u origin main
+git clone https://github.com/mortegac/sodimac-to-do-list-router.git
 ```
+
+3.- Una vez descargado a tu computador, ingresar en la carpeta del proyecto
+```
+cd sodimac-to-do-list-router
+
+```
+4.- Instalar las dependencia del proyecto utilizando:
+
+```
+yarn install
+```
+
+5.- Ejecutar el proyecto en modo de desarrollo
+
+```
+yarn start
+```
+
+<p align="center">
+  <img src="todo.gif">
+</p>
+
+
+
+
+
+
+

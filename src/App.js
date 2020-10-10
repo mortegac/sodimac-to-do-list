@@ -1,54 +1,48 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import './App.css';
+
+import { Container, Row, Col } from 'react-bootstrap'
+
+import ThemeProvider from './ThemeProvider';
+
+import NavBarTop from './components/NavBarTop';
 
 
-const App =()=> {
-  
-  // Add Task
-  const handleFormSubmit = async (e) =>  {
-      console.log('--e--', e);
-  };
+import Home from './view/Home';
+import Task from './view/Tasks';
+import MyTask from './view/MyTask';
+import NotFound from './view/NotFound';
 
-  // Remove Task
-  const deleteTask = (taskId) => 
-  {
-    console.log('--taskId--', taskId);
-   
-  }
-
+function App() {
   return (
-    <>
-      <div className="container">
-        <h1>To Do List</h1>
-        <section className="task-list">
-          <form onSubmit={ (e)=> handleFormSubmit(e) }>
-            <input
-              autoFocus={true}
-              className="new-todo"
-              placeholder="Que tienes que hacer?"
-              onChange={(e) => console.log(e.target.value) }
-            />
-          </form>
-          <section className="main">
-                <ul className="todo-list">
-                {
-                  (<span>No hay tareas</span>)
-                }
+    <Container>
+    
+      <ThemeProvider> 
 
-                  <li>
-                    <span className='with90'>TAREA</span>  
-                    <a className='with10' onClick={ ()=> deleteTask()}>X</a>
-                  </li>
-                </ul>
-          </section>
-          <footer className="footer">
-                0 items
-          </footer>
+        <BrowserRouter>
+          <Row>
+            <Col>
+              <NavBarTop/>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+            {/* CONTENIDO */}
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/mis-tareas" component={MyTask} />
+                <Route exact path="/tareas" component={Task} />
+              
+                <Route render={NotFound} />
+              </Switch>
+            </Col>
+          </Row>
+        </BrowserRouter>
 
-        </section>
-      </div>
-    </>
+      </ThemeProvider>
+
+    </Container>
   );
 }
 
